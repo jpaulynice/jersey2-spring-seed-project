@@ -1,0 +1,26 @@
+dependencies {
+    compile project(':awesome-project-model')
+	
+    compile 'org.springframework:spring-context:4.2.2.RELEASE'
+    compile 'org.springframework:spring-web:4.2.2.RELEASE'
+    compile 'org.springframework:spring-orm:4.2.2.RELEASE'
+    testCompile 'org.springframework:spring-test:4.2.2.RELEASE'
+    compile ('org.springframework.data:spring-data-jpa:1.9.0.RELEASE'){
+        exclude(module: 'spring-aop')
+        exclude(module: 'spring-tx')
+        exclude(module: 'spring-web')
+    }
+        
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.5'
+    runtime group: 'ch.qos.logback', name: 'logback-classic', version:'1.0.13'
+    
+    compile group: 'com.google.guava', name: 'guava', version:'17.0'
+    
+    compile 'org.postgresql:postgresql:9.4-1202-jdbc41'
+    
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:'4.2.11.Final'
+    compile group: 'org.hibernate', name: 'hibernate-core', version:'4.2.11.Final'
+    
+    testCompile 'org.hsqldb:hsqldb:2.3.3'
+    testCompile 'org.testng:testng:6.8.8'  
+}

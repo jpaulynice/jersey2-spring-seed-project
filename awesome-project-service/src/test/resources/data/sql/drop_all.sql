@@ -1,0 +1,5 @@
+--drop sequences
+DROP SEQUENCE IF EXISTS USERS_ID_KEY_SEQ;
+
+--drop tables
+DROP TABLE IF EXISTS USERS;
