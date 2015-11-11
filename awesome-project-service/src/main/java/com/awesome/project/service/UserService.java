@@ -9,7 +9,7 @@ public interface UserService {
     /**
      * Get user by id
      *
-     * @param userId the config id
+     * @param userId the user id
      * @return the user details
      */
     public User getUser(final Long userId);

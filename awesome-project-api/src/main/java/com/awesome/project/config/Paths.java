@@ -5,7 +5,7 @@ package com.awesome.project.config;
  */
 public class Paths {
     /**
-     * Configuration URL
+     * Users REST URL
      */
     public static final String USERS_URL = "users";
 
