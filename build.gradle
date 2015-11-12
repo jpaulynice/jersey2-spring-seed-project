@@ -1,5 +1,5 @@
 allprojects  {
-  group = 'com.awesome-project'
+  group = 'com.project'
   version = '1.0'
 }
 

@@ -1,1 +1,1 @@
-include "awesome-project-api", "awesome-project-service", "awesome-project-model"
+include "project-api", "project-service", "project-model"

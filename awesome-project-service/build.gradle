@@ -1,5 +1,5 @@
 dependencies {
-    compile project(':awesome-project-model')
+    compile project(':project-model')
 	
     compile 'org.springframework:spring-context:4.2.2.RELEASE'
     compile 'org.springframework:spring-web:4.2.2.RELEASE'
