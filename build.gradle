@@ -66,8 +66,4 @@ task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
             it.exists()
         })
     }
-  }
-
-task coveralls {
-    sourceDirs = files(subprojects.sourceSets.main.allSource.srcDirs).files.absolutePath
 }
