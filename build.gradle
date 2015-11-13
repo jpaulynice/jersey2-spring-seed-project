@@ -6,7 +6,7 @@ allprojects  {
   version = '1.0'
   
   repositories {
-  	mavenLocal()
+    mavenLocal()
     mavenCentral()
     jcenter()
   }
@@ -38,12 +38,6 @@ subprojects {
   
   sourceCompatibility = 1.7
   targetCompatibility = 1.7
-
-  repositories {
-    mavenLocal()
-    mavenCentral()
-    jcenter()
-  }
   
   test {
     useTestNG()
@@ -65,12 +59,10 @@ buildscript {
 }
 
 task testReport(type: TestReport, group: 'Build') {
-  description = 'Generates an aggregate test report'
   destinationDir = file("${buildDir}/reports/allTests")
 }
 
 task jacocoRootReport(type: JacocoReport, group: 'Coverage reports') {
-  description = 'Generates an aggregate report from all subprojects'
   dependsOn = subprojects.test
 
   additionalSourceDirs = files(subprojects.sourceSets.main.allSource.srcDirs)
@@ -94,9 +86,6 @@ coveralls {
 }
 
 tasks.coveralls {
-  group = 'Coverage reports'
-  description = 'Uploads the aggregated coverage report to Coveralls'
-
   dependsOn jacocoRootReport
   onlyIf { System.env.'CI' }
 }
