@@ -1,23 +1,12 @@
 allprojects  {
-  group = 'com.project'
+  group = 'com.awesome-project'
   version = '1.0'
-}
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
-    }
 }
 
 subprojects {
   apply plugin: 'java'
   apply plugin: 'maven'
   apply plugin: 'jacoco'
-  apply plugin: 'com.github.kt3k.coveralls'
   
    def coverageSourceDirs = [
     'src/main/java'
@@ -52,9 +41,8 @@ subprojects {
  }
  
  test.finalizedBy(project.tasks.jacocoTestReport)
-}
-
-task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
+ 
+ task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
     dependsOn = subprojects.test
     additionalSourceDirs = files(subprojects.sourceSets.main.allSource.srcDirs)
     sourceDirectories = files(subprojects.sourceSets.main.allSource.srcDirs)
@@ -77,4 +65,5 @@ task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
             it.exists()
         })
     }
+  }
 }
