@@ -4,6 +4,12 @@ apply plugin: 'jacoco'
 allprojects  {
   group = 'com.project'
   version = '1.0'
+  
+  repositories {
+  	mavenLocal()
+    mavenCentral()
+    jcenter()
+  }
 }
 
 subprojects {
@@ -35,9 +41,8 @@ subprojects {
 
   repositories {
     mavenLocal()
-    jcenter()
     mavenCentral()
-    maven { url 'https://plugins.gradle.org/m2' }
+    jcenter()
   }
   
   test {
@@ -50,7 +55,6 @@ subprojects {
 buildscript {
   repositories {
   	mavenLocal()
-    maven { url 'https://plugins.gradle.org/m2' }
     mavenCentral()
     jcenter()
   }
