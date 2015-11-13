@@ -1,5 +1,7 @@
 language: java
 script: ./gradlew build jacocoTestReport
+before_install:
+  - chmod +x gradlew
 jdk:
   - openjdk7
   - oraclejdk7
