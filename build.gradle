@@ -41,8 +41,9 @@ subprojects {
  }
  
  test.finalizedBy(project.tasks.jacocoTestReport)
- 
- task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
+}
+
+task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
     dependsOn = subprojects.test
     additionalSourceDirs = files(subprojects.sourceSets.main.allSource.srcDirs)
     sourceDirectories = files(subprojects.sourceSets.main.allSource.srcDirs)
