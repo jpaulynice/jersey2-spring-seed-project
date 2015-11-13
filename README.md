@@ -18,6 +18,6 @@ This also comes with a gradle task to create unit test coverage for each subproj
 
 #setup
 The goal of this project is to make it super easy to create a restful application using Jersey2 and Spring
-- //TODO: will add more details but for the most part
-- Find 'project' and replace with 'yourproject name'
-- Find 'com.project' and replace with 'com.yourproject'
+- //TODO: add more details
+- Find 'project-' and replace with 'yourproject name' i.e: 'project-api' --> 'fantastic-api'
+- Find 'com.project' and replace with 'com.your-comany' i.e: 'com.project' --> 'com.fantastic.company'
