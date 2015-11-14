@@ -2,11 +2,16 @@
 [![Build Status](https://travis-ci.org/julesbond007/jersey2-spring-seed-project.svg?branch=master)](https://travis-ci.org/julesbond007/jersey2-spring-seed-project)
 [![Coverage Status](https://coveralls.io/repos/julesbond007/jersey2-spring-seed-project/badge.svg?branch=master&service=github)](https://coveralls.io/github/julesbond007/jersey2-spring-seed-project?branch=master) 
 
-Seed project to create REST API using Jersey2 and Spring Framework.  This project uses spring annotations to configure spring beans and dependencies, spring data/jpa/hibernate for database entities, gradle as build management, and testng with hsqldb for unit testing.
+Seed project to create REST API using Jersey2 and Spring Framework for dependency injection.  
 
-This also comes with a gradle task to create unit test coverage for each subproject when gradle build or test is invoked.
+- Spring beans and dependencies are configured using annotations.
+- Database access is provided by spring data/jpa/hibernate
+- Gradle as build management
+- Testng with hsqldb for unit testing.
 
-#tech stack
+This also comes with a gradle task to aggregate unit test coverage from subprojects: `gradle jacocoRootReport`
+
+#full tech stack
 - Java
 - Jersey 2.22.1
 - Spring 4.2.2
@@ -18,5 +23,7 @@ This also comes with a gradle task to create unit test coverage for each subproj
 
 #setup
 The goal of this project is to make it super easy to create a restful application using Jersey2 and Spring
-- Find 'project-' and replace with 'yourproject name' i.e: 'project-api' --> 'fantastic-api'
-- Find 'com.project' and replace with 'com.your-comany' i.e: 'com.project' --> 'com.fantastic.company'
+- Rename subprojects `project-*` with 'yourproject name' i.e: 'project-api' --> 'fantastic-api'
+- Rename the default package from  `com.project` to `com.your-comany`
+- Update `gradle.settings` with new project names
+- Update `web.xml` with new package names
