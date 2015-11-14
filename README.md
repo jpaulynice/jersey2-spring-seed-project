@@ -9,7 +9,8 @@ Seed project to create REST API using Jersey2 and Spring Framework for dependenc
 - Gradle as build management
 - Testng with hsqldb for unit testing.
 
-This also comes with a gradle task to aggregate unit test coverage from subprojects: `gradle jacocoRootReport`
+This also comes with a gradle task to aggregate unit test coverage from subprojects: 
+`gradle jacocoRootReport`
 
 #full tech stack
 - Java
@@ -24,6 +25,6 @@ This also comes with a gradle task to aggregate unit test coverage from subproje
 #setup
 The goal of this project is to make it super easy to create a restful application using Jersey2 and Spring
 - Rename subprojects `project-*` with `yourproject name` i.e: `project-api` --> `fantastic-api`
-- Rename the default package from  `com.project` to `com.your-comany`
+- Rename the default package from  `com.project` to `com.your-company`
 - Update `gradle.settings` with new project names
 - Update `web.xml` with new package names
