@@ -13,9 +13,15 @@ import com.project.model.Message;
 import com.project.model.User;
 
 /**
+ * Test class for UserResource API. This uses the grizzly web server on port 0
+ * to fire requests against the API.
+ *
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
 public class UserResourceTest extends BaseJerseyTest {
+    /**
+     * User found with id 123
+     */
     @Test
     public void testGet() {
         final Response response = target(USERS_URL + "/123").request().get();
@@ -33,6 +39,9 @@ public class UserResourceTest extends BaseJerseyTest {
         assertEquals(dto, expected);
     }
 
+    /**
+     * No user found test
+     */
     @Test
     public void testGet404() {
         final Response response = target(USERS_URL + "/112").request().get();

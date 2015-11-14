@@ -8,17 +8,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import com.project.config.JerseyApplication;
-
 /**
  * Base test class for all jersey unit tests
  *
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
-public class BaseJerseyTest extends JerseyTest {
+public abstract class BaseJerseyTest extends JerseyTest {
     /*
      * (non-Javadoc)
-     *
      * @see org.glassfish.jersey.test.JerseyTest#setUp()
      */
     @Override
@@ -29,7 +26,6 @@ public class BaseJerseyTest extends JerseyTest {
 
     /*
      * (non-Javadoc)
-     *
      * @see org.glassfish.jersey.test.JerseyTest#tearDown()
      */
     @Override
@@ -40,7 +36,6 @@ public class BaseJerseyTest extends JerseyTest {
 
     /*
      * (non-Javadoc)
-     *
      * @see org.glassfish.jersey.test.JerseyTest#configure()
      */
     @Override

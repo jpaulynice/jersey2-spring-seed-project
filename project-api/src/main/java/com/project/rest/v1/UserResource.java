@@ -18,7 +18,8 @@ import com.project.model.User;
 import com.project.service.UserService;
 
 /**
- * Resource end point to do rest operations for a user object.
+ * Resource end point to do operations such as create, update, delete and fetch
+ * user details.
  *
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */

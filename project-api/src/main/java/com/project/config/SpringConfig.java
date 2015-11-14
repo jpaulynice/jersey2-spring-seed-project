@@ -13,12 +13,11 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @ComponentScan(
-        basePackages = { "com.project.service",
-                "com.project.rest" },
+        basePackages = { "com.project.service", "com.project.rest" },
         excludeFilters = @Filter(
                 type = FilterType.REGEX,
                 pattern = "com.project.config.*"))
 @Import({ SpringDataConfig.class })
 public class SpringConfig {
-
+    // nothing to see here yet
 }

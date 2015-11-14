@@ -5,11 +5,13 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * @author Jay Paulynice (jay.paulynice@gmail.com)
+ * Base class for spring dependency unit testing.
  *
+ * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
 @Transactional
-@ContextConfiguration(classes = TestConfig.class)
-public class BaseSpringTest extends AbstractTestNGSpringContextTests {
+@ContextConfiguration(
+        classes = TestConfig.class)
+public abstract class BaseSpringTest extends AbstractTestNGSpringContextTests {
     // nothing to see here
 }

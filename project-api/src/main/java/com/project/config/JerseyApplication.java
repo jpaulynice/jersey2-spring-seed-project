@@ -7,7 +7,7 @@ import com.project.rest.provider.AppExceptionMapper;
 import com.project.rest.v1.UserResource;
 
 /**
- * Jersey application configuration for rest api
+ * Jersey application configuration for our rest api
  *
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */

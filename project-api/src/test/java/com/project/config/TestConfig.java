@@ -11,9 +11,9 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.jndi.JndiObjectFactoryBean;
 import org.springframework.mock.jndi.SimpleNamingContextBuilder;
 
-import com.project.config.SpringConfig;
-
 /**
+ * Test configuration with dataSource overidden to use the in-memory hsqldb
+ *
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
 @Configuration
@@ -27,12 +27,12 @@ public class TestConfig {
         return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.HSQL)
                 .addScript("classpath:data/sql/drop_all.sql").addScript(
                         "classpath:data/sql/schema.sql").addScript(
-                                "classpath:data/sql/test-data.sql").build();
+                        "classpath:data/sql/test-data.sql").build();
     }
 
     @Bean
     JndiObjectFactoryBean jndiDataSource() throws IllegalStateException,
-    NamingException {
+            NamingException {
         final String jndiName = "java:com/env/foo";
         final SimpleNamingContextBuilder builder = new SimpleNamingContextBuilder();
         builder.bind(jndiName, dataSource());
