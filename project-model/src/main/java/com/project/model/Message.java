@@ -1,5 +1,10 @@
 package com.project.model;
 
+/**
+ * Object to show human readable message translation from the API.
+ *
+ * @author Jay Paulynice (jay.paulynice@gmail.com)
+ */
 public class Message {
     private int status;
     private String info;
