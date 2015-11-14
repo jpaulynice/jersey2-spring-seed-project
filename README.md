@@ -23,7 +23,7 @@ This also comes with a gradle task to aggregate unit test coverage from subproje
 
 #setup
 The goal of this project is to make it super easy to create a restful application using Jersey2 and Spring
-- Rename subprojects `project-*` with 'yourproject name' i.e: 'project-api' --> 'fantastic-api'
+- Rename subprojects `project-*` with `yourproject name` i.e: `project-api` --> `fantastic-api`
 - Rename the default package from  `com.project` to `com.your-comany`
 - Update `gradle.settings` with new project names
 - Update `web.xml` with new package names
