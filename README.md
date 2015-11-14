@@ -5,7 +5,7 @@
 Seed project to create REST API using Jersey2 and Spring Framework for dependency injection.  
 
 - Spring beans and dependencies are configured using annotations.
-- Database via Spring Data/JPA/Hibernate
+- Database access via Spring Data/JPA/Hibernate
 - Gradle as build management
 - Testng with hsqldb for unit testing.
 
