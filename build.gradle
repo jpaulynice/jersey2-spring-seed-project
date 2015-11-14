@@ -1,7 +1,11 @@
-apply plugin: 'com.github.kt3k.coveralls'
-apply plugin: 'jacoco'
-
 allprojects  {
+  apply plugin: 'com.github.kt3k.coveralls'
+  apply plugin: 'java'
+  apply plugin: 'jacoco'
+  
+  sourceCompatibility = 1.7
+  targetCompatibility = 1.7
+
   group = 'com.project'
   version = '1.0'
   
@@ -12,11 +16,19 @@ allprojects  {
   }
 }
 
-subprojects {
-  apply plugin: 'java'
-  apply plugin: 'maven'
-  apply plugin: 'jacoco'
-  
+buildscript {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
+  }
+}
+
+subprojects {  
   def coverageSourceDirs = [
     'src/main/java'
   ]
@@ -36,26 +48,11 @@ subprojects {
      }
   }
   
-  sourceCompatibility = 1.7
-  targetCompatibility = 1.7
-  
   test {
     useTestNG()
   }
  
   test.finalizedBy(project.tasks.jacocoTestReport)
-}
-
-buildscript {
-  repositories {
-    mavenLocal()
-    mavenCentral()
-    jcenter()
-  }
-
-  dependencies {
-    classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
-  }
 }
 
 task testReport(type: TestReport, group: 'Build') {
