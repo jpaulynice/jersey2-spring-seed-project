@@ -1,5 +1,6 @@
 package com.project.rest.v1;
 
+import static com.project.config.Paths.USERS_URL;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
@@ -17,7 +18,7 @@ import com.project.model.User;
 public class UserResourceTest extends BaseJerseyTest {
     @Test
     public void testGet() {
-        final Response response = target("users/123").request().get();
+        final Response response = target(USERS_URL + "/123").request().get();
 
         assertNotNull(response);
         assertEquals(response.getStatus(), 200);
@@ -34,7 +35,7 @@ public class UserResourceTest extends BaseJerseyTest {
 
     @Test
     public void testGet404() {
-        final Response response = target("users/112").request().get();
+        final Response response = target(USERS_URL + "/112").request().get();
 
         assertNotNull(response);
         assertEquals(response.getStatus(), 404);
