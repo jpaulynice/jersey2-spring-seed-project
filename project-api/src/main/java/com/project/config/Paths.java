@@ -1,6 +1,8 @@
 package com.project.config;
 
 /**
+ * REST Url path constants
+ *
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
 public class Paths {

@@ -41,9 +41,9 @@ subprojects {
   
   test {
     useTestNG()
- }
+  }
  
- test.finalizedBy(project.tasks.jacocoTestReport)
+  test.finalizedBy(project.tasks.jacocoTestReport)
 }
 
 buildscript {

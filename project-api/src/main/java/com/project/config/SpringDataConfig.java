@@ -17,7 +17,10 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * Configuration for Spring Data/JPA using annotations
+ * Configuration for Spring Data/JPA using annotations. This assumes the
+ * datasource is configured as a jndi resource as in tomcat's server.xml with
+ * name {@code jndiDBresource}
+ *
  *
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
@@ -44,7 +47,7 @@ public class SpringDataConfig {
     @Bean
     JndiObjectFactoryBean jndiDataSource() {
         final JndiObjectFactoryBean bean = new JndiObjectFactoryBean();
-        bean.setJndiName("java:comp/env/secAPIDB");
+        bean.setJndiName("java:comp/env/jndiDBresource");
         bean.setResourceRef(true);
 
         return bean;

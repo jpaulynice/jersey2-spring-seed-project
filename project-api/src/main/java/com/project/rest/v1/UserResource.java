@@ -17,6 +17,11 @@ import org.springframework.stereotype.Component;
 import com.project.model.User;
 import com.project.service.UserService;
 
+/**
+ * Resource end point to do rest operations for a user object.
+ *
+ * @author Jay Paulynice (jay.paulynice@gmail.com)
+ */
 @Component
 @Path(USERS_URL)
 @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
