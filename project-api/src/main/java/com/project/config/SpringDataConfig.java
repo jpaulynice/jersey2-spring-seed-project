@@ -21,7 +21,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * datasource is configured as a jndi resource as in tomcat's server.xml with
  * name {@code jndiDBresource}
  *
- *
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
 @Configuration
