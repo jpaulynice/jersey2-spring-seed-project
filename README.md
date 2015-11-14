@@ -23,7 +23,7 @@ This also comes with a gradle task to aggregate unit test coverage from subproje
 - HSQLDB 2.3.3
 
 #setup
-- Rename subprojects `project-*` with `yourproject name` i.e: `project-api` --> `fantastic-api`
-- Rename the default package from  `com.project` to `com.your-company`
+- Rename subprojects `project-*` to `yourproject name` i.e: `project-api` --> `fantastic-api`
+- Rename the default package  `com.project` to `com.your-company`
 - Update `gradle.settings` with new project names
 - Update `web.xml` with new package names
