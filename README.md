@@ -10,7 +10,7 @@ Seed project to create REST API using Jersey2 and Spring Framework for dependenc
 - Testng with hsqldb for unit testing.
 
 This also comes with a gradle task to aggregate unit test coverage from subprojects: 
-`gradle jacocoRootReport`
+- `gradle jacocoRootReport`
 
 #full tech stack
 - Java
