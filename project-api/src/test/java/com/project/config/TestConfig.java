@@ -23,16 +23,16 @@ public class TestConfig {
      * @return the datasource
      */
     @Bean
-    public DataSource dataSource() {
+    DataSource dataSource() {
         return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.HSQL)
-                .addScript("classpath:data/sql/drop_all.sql").addScript(
-                        "classpath:data/sql/schema.sql").addScript(
-                        "classpath:data/sql/test-data.sql").build();
+                .addScript("classpath:data/sql/drop_all.sql")
+                .addScript("classpath:data/sql/schema.sql")
+                .addScript("classpath:data/sql/test-data.sql").build();
     }
 
     @Bean
     JndiObjectFactoryBean jndiDataSource() throws IllegalStateException,
-            NamingException {
+    NamingException {
         final String jndiName = "java:com/env/foo";
         final SimpleNamingContextBuilder builder = new SimpleNamingContextBuilder();
         builder.bind(jndiName, dataSource());
