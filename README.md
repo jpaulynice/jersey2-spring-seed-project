@@ -13,7 +13,7 @@ This also comes with a gradle task to aggregate unit test coverage from subproje
 - `gradle jacocoRootReport`
 
 #full tech stack
-- Java
+- Java 1.7
 - Jersey 2.22.1
 - Spring 4.2.2
 - Spring Data/JPA 1.9.0
