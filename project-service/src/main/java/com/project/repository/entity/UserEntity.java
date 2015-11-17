@@ -10,36 +10,44 @@ import javax.persistence.SequenceGenerator;
 /**
  * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
-@Entity(name = "USERS")
+@Entity(
+        name = "USERS")
 public class UserEntity {
     @Id
-    @GeneratedValue(generator = "USERS_KEY_SEQ",
-    strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "USERS_KEY_SEQ",
-            sequenceName = "USERS_ID_KEY_SEQ", allocationSize = 1)
-    @Column(name = "ID")
+    @GeneratedValue(
+            generator = "USERS_KEY_SEQ",
+            strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(
+            name = "USERS_KEY_SEQ",
+    sequenceName = "USERS_ID_KEY_SEQ",
+            allocationSize = 1)
+    @Column(
+            name = "USER_ID")
     private Long id;
 
-    @Column(name = "FIRST_NAME")
+    @Column(
+            name = "FIRST_NAME")
     private String firstName;
 
-    @Column(name = "LAST_NAME")
+    @Column(
+            name = "LAST_NAME")
     private String lastName;
 
-    @Column(name = "USERNAME")
+    @Column(
+            name = "USERNAME")
     private String userName;
 
     /**
      * @return the id
      */
     public Long getId() {
-        return this.id;
+        return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Long id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 
@@ -47,27 +55,27 @@ public class UserEntity {
      * @return the firstName
      */
     public String getFirstName() {
-        return this.firstName;
+        return firstName;
     }
 
     /**
      * @return the lastName
      */
     public String getLastName() {
-        return this.lastName;
+        return lastName;
     }
 
     /**
      * @param firstName the firstName to set
      */
-    public void setFirstName(String firstName) {
+    public void setFirstName(final String firstName) {
         this.firstName = firstName;
     }
 
     /**
      * @param lastName the lastName to set
      */
-    public void setLastName(String lastName) {
+    public void setLastName(final String lastName) {
         this.lastName = lastName;
     }
 
@@ -75,13 +83,13 @@ public class UserEntity {
      * @return the userName
      */
     public String getUserName() {
-        return this.userName;
+        return userName;
     }
 
     /**
      * @param userName the userName to set
      */
-    public void setUserName(String userName) {
+    public void setUserName(final String userName) {
         this.userName = userName;
     }
 }

@@ -30,14 +30,14 @@ public class AppExceptionMapper implements ExceptionMapper<RuntimeException> {
             final AbstractBaseException ex = (AbstractBaseException) e;
             message = new Message(ex.getStatus(), ex.getMessage());
         } else if (e instanceof WebApplicationException) {
-            message = getAppExMesage(e);
+            message = webAppExMessage(e);
         } else {
             message = genericMessage();
         }
         return Response.status(message.getStatus()).entity(message).build();
     }
 
-    private Message getAppExMesage(final RuntimeException e) {
+    private Message webAppExMessage(final RuntimeException e) {
         final WebApplicationException webEx = (WebApplicationException) e;
         final Response r = webEx.getResponse();
         return new Message(r.getStatus(), e.getMessage());
