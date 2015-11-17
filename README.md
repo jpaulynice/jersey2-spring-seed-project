@@ -27,3 +27,16 @@ This also comes with a gradle task to aggregate unit test coverage from subproje
 - Rename the default package  `com.project` to `com.your-company`
 - Update `gradle.settings` with new project names
 - Update `web.xml` with new package names
+
+```xml
+<Resource name="jndiDBresource"
+        auth="Container"
+        type="javax.sql.DataSource"
+        username="postgres"
+        password=""
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://localhost:5432/sec_db"
+        maxTotal="25"
+        maxIdle="10"
+        validationQuery="select 1" />
+```
