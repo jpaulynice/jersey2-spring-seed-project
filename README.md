@@ -35,7 +35,7 @@ This also comes with a gradle task to aggregate unit test coverage from subproje
         username="postgres"
         password=""
         driverClassName="org.postgresql.Driver"
-        url="jdbc:postgresql://localhost:5432/sec_db"
+        url="jdbc:postgresql://localhost:5432/postgres"
         maxTotal="25"
         maxIdle="10"
         validationQuery="select 1" />
