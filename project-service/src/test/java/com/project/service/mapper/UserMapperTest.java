@@ -9,11 +9,11 @@ import org.testng.annotations.Test;
 import com.project.model.User;
 import com.project.repository.entity.UserEntity;
 import com.project.service.BaseSpringTest;
-import com.project.service.mapper.UserMapper;
 
 /**
- * @author Jay Paulynice (jay.paulynice@gmail.com)
+ * Test user mapping class
  *
+ * @author Jay Paulynice (jay.paulynice@gmail.com)
  */
 public class UserMapperTest extends BaseSpringTest {
     @Autowired
